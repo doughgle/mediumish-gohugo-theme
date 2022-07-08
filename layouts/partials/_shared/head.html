@@ -17,10 +17,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
 
 	{{ $medium := resources.Get "/css/medium.css" | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $medium.RelPermalink | absURL }}" integrity="{{ $medium.Data.Integrity }}">
+	<link rel="stylesheet" href="{{ $medium.RelPermalink | absURL }}" integrity="{{ $medium.Data.Integrity }}" crossorigin="anonymous">
 
 	{{ $additional := resources.Get "/css/additional.css" | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $additional.RelPermalink | absURL }}" integrity="{{ $additional.Data.Integrity }}">
+	<link rel="stylesheet" href="{{ $additional.RelPermalink | absURL }}" integrity="{{ $additional.Data.Integrity }}" crossorigin="anonymous">
 
 	<!-- Custom css -->
 	{{ range .Site.Params.customCSS -}}
